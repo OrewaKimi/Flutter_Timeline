@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertimeline/components/my_timeline_tile.dart';
-import 'package:fluttertimeline/components/my_timeline_tile.dart';
 
-class HomePage extends StatefulWidget{
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
@@ -14,42 +13,34 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric( horizontal: 50.0),
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: ListView(
           children: const [
-            // start of timeline
             MyTimelineTile(
-              isFirst: true, 
-              isLast: false, 
+              isFirst: true,
+              isLast: false,
               isPast: true,
-              eventCard: Text("Opening Ceremony",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
+              eventCard: Text(
+                "🎉 Opening Ceremony",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),
               ),
             ),
-            // middle of timeline
-             MyTimelineTile(
-              isFirst: false, 
-              isLast: false, 
+            MyTimelineTile(
+              isFirst: false,
+              isLast: false,
               isPast: true,
-              eventCard: Text("Main Event",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+              eventCard: Text(
+                "🎤 Main Event",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.white),
               ),
-              ),
-             ),
-            // end of timeline
-             MyTimelineTile(
-              isFirst: false, 
-              isLast: true, 
+            ),
+            MyTimelineTile(
+              isFirst: false,
+              isLast: true,
               isPast: false,
-              eventCard: Text("Ending Ceremony",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,),
+              eventCard: Text(
+                "🏁 Closing Ceremony",
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600, color: Colors.black87),
               ),
             ),
           ],
