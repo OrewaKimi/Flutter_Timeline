@@ -22,22 +22,36 @@ class _HomePageState extends State<HomePage> {
               isFirst: true, 
               isLast: false, 
               isPast: true,
-              eventCard: Text("Opening Ceremony"),
+              eventCard: Text("Opening Ceremony",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
             ),
             // middle of timeline
              MyTimelineTile(
               isFirst: false, 
               isLast: false, 
               isPast: true,
-              eventCard: Text("Main Event"),
+              eventCard: Text("Main Event",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
              ),
             // end of timeline
              MyTimelineTile(
               isFirst: false, 
               isLast: true, 
               isPast: false,
-              eventCard: Text("Ending Ceremony"),
+              eventCard: Text("Ending Ceremony",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,),
               ),
+            ),
           ],
         ),
       ),
